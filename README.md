@@ -37,8 +37,8 @@ GridPredictor leverages machine learning and historical F1 data to provide accur
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/racecast-pro.git
-   cd racecast-pro
+   git clone https://github.com/yourusername/gridpredictor.git
+   cd gridpredictor
    ```
 
 2. Set up frontend environment:
