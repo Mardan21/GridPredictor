@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "./tailwind.config.js";
 
 :root {
   --background: #ffffff;
@@ -23,4 +24,105 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom styles for our components */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.dark .card {
+  @apply bg-[#1f2937];
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-[#e10600] hover:bg-[#c00500] text-white rounded-md 
+        transition-colors duration-200 font-medium focus:outline-none focus:ring-2 
+        focus:ring-[#e10600]/50;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-200 hover:bg-gray-300 
+        text-gray-800 rounded-md transition-colors duration-200 font-medium 
+        focus:outline-none focus:ring-2 focus:ring-gray-400/50;
+}
+
+.dark .btn-secondary {
+  @apply bg-[#374151] hover:bg-[#4b5563] text-[#e5e7eb];
+}
+
+.input {
+  @apply w-full px-3 py-2 bg-white border border-gray-300 
+        rounded-md shadow-sm focus:outline-none 
+        focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.dark .input {
+  @apply bg-[#374151] border-[#4b5563];
+}
+
+.select {
+  @apply w-full px-3 py-2 bg-white border border-gray-300 
+        rounded-md shadow-sm focus:outline-none 
+        focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.dark .select {
+  @apply bg-[#374151] border-[#4b5563] text-white;
+}
+
+.tooltip {
+  @apply absolute z-10 p-2 text-xs bg-gray-900 text-white rounded shadow-lg 
+        transition-opacity duration-300;
+}
+
+/* F1-style data table */
+.f1-table {
+  @apply w-full text-sm text-left border-collapse;
+}
+
+.f1-table thead tr {
+  @apply bg-[#e10600] text-white uppercase text-xs;
+}
+
+.f1-table th {
+  @apply px-4 py-3 font-semibold;
+}
+
+.f1-table tbody tr {
+  @apply border-b border-gray-200;
+}
+
+.dark .f1-table tbody tr {
+  @apply border-gray-700;
+}
+
+.f1-table tbody tr:hover {
+  @apply bg-gray-100;
+}
+
+.dark .f1-table tbody tr:hover {
+  @apply bg-[#1f2937];
+}
+
+.f1-table td {
+  @apply px-4 py-3;
+}
+
+/* Chart styling */
+.chart-container {
+  @apply rounded-lg bg-white p-4 shadow-md;
+}
+
+.dark .chart-container {
+  @apply bg-[#1f2937];
+}
+
+/* Loader */
+.loader {
+  @apply flex justify-center items-center p-4;
+}
+
+.spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-b-2 border-[#e10600];
 }
